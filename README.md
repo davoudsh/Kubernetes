@@ -16,6 +16,8 @@ D) Kubernetes deployments
 # Steps
 A) Install mysql 
 
+https://dev.mysql.com/downloads/mysql/
+
 Windows) 
 
 https://dev.mysql.com/doc/refman/5.5/en/windows-installation.html
