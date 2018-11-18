@@ -14,7 +14,7 @@ int main(int argc, char* argv[])
         // SQLServer, InterBase, SQLBase and ODBC 
         con.Connect ("test",    // database name 
                      "tester",  // user name 
-                     "tester",  // password 
+                     "tester",  // password https://en.cppreference.com/w/cpp/utility/program/getenv
                      SA_Oracle_Client); //Oracle Client 
         printf("We are connected!\n"); 
   
