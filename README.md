@@ -11,3 +11,15 @@ C) Terraform to create Kubernetes cluster and AWS RDS
 
 D) Kubernetes deployments
 
+
+
+# Steps
+A) Install mysql 
+
+Windows) 
+
+https://dev.mysql.com/doc/refman/5.5/en/windows-installation.html
+
+B) use this app
+
+https://mandeepsimak.wordpress.com/tag/mysql-c-example/
