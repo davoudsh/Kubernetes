@@ -15,7 +15,7 @@ using namespace std;
 // Specify our connection target and credentials
 const string server   = "tcp://127.0.0.1:3306";
 const string username = "root";
-const string password = ""; // No password - thanks, WAMP Server! //https://en.cppreference.com/w/cpp/utility/program/getenv
+const string password = "davoudhamed"; // No password - thanks, WAMP Server! //https://en.cppreference.com/w/cpp/utility/program/getenv
  
 int main()
 {
