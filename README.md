@@ -1,7 +1,7 @@
 # Kubernetes
 
 # Goals
-A) Create an app to read data input and save it to database
+A) Create an app to read data from user input and save it to database
 
 B) Dockerize the applicaiton
 
