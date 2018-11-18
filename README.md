@@ -14,9 +14,11 @@ D) Kubernetes deployments
 
 
 # Steps
-A) Install mysql 
+A) Install mysql or use dockerhub
 
 https://dev.mysql.com/downloads/mysql/
+
+https://hub.docker.com/_/mysql/
 
 Windows) 
 
