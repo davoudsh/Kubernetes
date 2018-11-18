@@ -4,6 +4,7 @@
 please create a new branch and use merge request to push to master
 
 A) Create an app to read data from user input and save it to database
+https://www.youtube.com/watch?v=RAXjsQZTObE
 
 B) Dockerize the applicaiton
 
