@@ -1,33 +1,39 @@
-#include <iostream>
-#include <string>
-#include <mysql++.h>
 #include <mysql.h>
-
-#define dbname "dbname"
-#define server "localhost"
-#define user "root"
-#define pass "davoudhamed"
-
-using namespace std;
-using namespace mysqlpp;
-
-int main() {
-    Connection con(true);
-    try {
-        con.connect(dbname, server, user, pass);
-        cout << "Connected to database\n";
-        string s = "SELECT * FROM mirrors_mee WHERE id=1";
-        Query q = con.query(s);
-        StoreQueryResult sq = q.store();
-        StoreQueryResult::iterator it;
-        it = sq.begin();
-        while (it != sq.end()) {
-            Row row = *it;
-            cout << row[5] << " " << row[6] << " " << row[7] << endl;
-            it++;
-        }
-    } catch (Exception &e) {
-        cout << e.what() << endl;
-    }
-    return 0;
+#include <stdio.h>
+main() {
+	MYSQL *conn;
+	MYSQL_RES *res;
+	MYSQL_ROW row;
+	
+	char *server = "localhost";
+	char *user = "root";
+	char *password = "davoudhamed"; /* set me first */
+	char *database = "mysql";
+	
+	conn = mysql_init(NULL);
+	
+	/* Connect to database */
+	if (!mysql_real_connect(conn, server, user, password, 
+                                      database, 0, NULL, 0)) {
+		fprintf(stderr, "%s\n", mysql_error(conn));
+		exit(1);
+	}
+	
+	/* send SQL query */
+	if (mysql_query(conn, "show tables")) {
+		fprintf(stderr, "%s\n", mysql_error(conn));
+		exit(1);
+	}
+   
+	res = mysql_use_result(conn);
+	
+	/* output table name */
+	printf("MySQL Tables in mysql database:\n");
+   
+	while ((row = mysql_fetch_row(res)) != NULL)
+		printf("%s \n", row[0]);
+   
+	/* close connection */
+	mysql_free_result(res);
+	mysql_close(conn);
 }
