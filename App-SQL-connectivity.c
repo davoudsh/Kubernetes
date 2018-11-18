@@ -1,4 +1,4 @@
-* Simple C program that connects to MySQL Database server*/
+/* Simple C program that connects to MySQL Database server*/
 #include <mysql.h>
 #include <stdio.h>
 
